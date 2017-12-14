@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layoutCall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/glview_call"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <android.view.SurfaceView
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutCallerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp">
+
+        <EditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:ems="10"
+            android:hint="Enter the user name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_below="@+id/editTextUsername"
+            android:ems="10"
+            android:hint="Enter the emergency number"
+            android:inputType="phone" />
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            style="@android:style/Widget.ActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:textColor="#0F0000"
+            android:background="@android:color/white"
+            android:layout_below="@+id/editTextNumber"
+            android:layout_centerHorizontal="true"
+            android:text="Save" />
+
+
+        <TextView
+            android:id="@+id/infoMsgTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/buttonSubmit"
+            android:ems="10"
+            android:text="When you'll call the above number, your audio/video/location will be broadcast to http://88.198.197.4:3000/"
+            />
+
+       <!-- <android.opengl.GLSurfaceView
+            android:id="@+id/glview_call"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/infoMsgTextView" />-->
+    </RelativeLayout>
+
+
+</RelativeLayout>
